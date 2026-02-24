@@ -7,7 +7,13 @@ const userSchema = new mongoose.Schema({
     required: [true, 'Ad tələb olunur'],
     trim: true
   },
-
+  eposta: {  // email əvəzinə eposta
+    type: String,
+    required: [true, 'E-poçt tələb olunur'],
+    unique: true,
+    lowercase: true,
+    trim: true
+  },
   sifre: {  // parol əvəzinə sifre
     type: String,
     required: [true, 'Şifrə tələb olunur'],

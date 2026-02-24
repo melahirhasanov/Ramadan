@@ -10,21 +10,28 @@ const tokenYarat = (id) => {
 // @route   POST /api/auth/register
 const qeydiyyat = async (req, res) => {
   try {
-    const { ad, sifre } = req.body;
+    const { ad, eposta, sifre } = req.body;
 
-    // Yoxlama
-    if (!ad || !sifre) {
-      return res.status(400).json({ message: 'İstifadəçi adı və şifrə tələb olunur' });
+    // Yoxlama – bütün sahələr tələb olunur
+    if (!ad || !eposta || !sifre) {
+      return res.status(400).json({ message: 'İstifadəçi adı, e-poçt və şifrə tələb olunur' });
     }
 
     // İstifadəçi adının unikallığını yoxla
-    const movcudIstifadeci = await User.findOne({ ad });
-    if (movcudIstifadeci) {
+    const movcudAd = await User.findOne({ ad });
+    if (movcudAd) {
       return res.status(400).json({ message: 'Bu istifadəçi adı artıq qeydiyyatdan keçib' });
+    }
+
+    // E-poçtun unikallığını yoxla
+    const movcudEposta = await User.findOne({ eposta });
+    if (movcudEposta) {
+      return res.status(400).json({ message: 'Bu e-poçt ünvanı artıq qeydiyyatdan keçib' });
     }
 
     const istifadeci = await User.create({ 
       ad, 
+      eposta,       // ƏLAVƏ EDİLDİ
       sifre
     });
 
@@ -32,7 +39,8 @@ const qeydiyyat = async (req, res) => {
       token: tokenYarat(istifadeci._id),
       istifadeci: {
         id: istifadeci._id,
-        ad: istifadeci.ad
+        ad: istifadeci.ad,
+        eposta: istifadeci.eposta   // geriyə e-poçt da göndərilir (istəyə bağlı)
       }
     });
   } catch (err) {
@@ -47,7 +55,7 @@ const giris = async (req, res) => {
   try {
     const { ad, sifre } = req.body;
 
-    // İstifadəçini tap (ad ilə)
+    // İstifadəçini tap (ad ilə) – e-poçtla da giriş imkanı verə bilərsiniz
     const istifadeci = await User.findOne({ ad });
     
     if (!istifadeci) {
@@ -64,7 +72,8 @@ const giris = async (req, res) => {
       token: tokenYarat(istifadeci._id),
       istifadeci: {
         id: istifadeci._id,
-        ad: istifadeci.ad
+        ad: istifadeci.ad,
+        eposta: istifadeci.eposta   // geriyə e-poçt da göndərilir (istəyə bağlı)
       }
     });
   } catch (err) {
