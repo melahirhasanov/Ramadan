@@ -7,7 +7,7 @@ const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const readingRoutes = require('./routes/readingRoutes');
 const statsRoutes = require('./routes/statsRoutes');
-const zikrRoutes = require('./routes/ZikrRoutes');
+const zikrRoutes = require('./routes/ZikrrRoute');
 
 connectDB();
 
