@@ -7,6 +7,7 @@ const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
 const readingRoutes = require('./routes/readingRoutes');
 const statsRoutes = require('./routes/statsRoutes');
+const zikrRoutes = require('./routes/ZikrRoutes');
 
 connectDB();
 
@@ -21,6 +22,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/readings', readingRoutes);
 app.use('/api/stats', statsRoutes);
+app.use('/api/zikr', zikrRoutes);
 
 // Ana səhifə (test üçün)
 app.get('/', (req, res) => {
