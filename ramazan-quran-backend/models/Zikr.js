@@ -16,23 +16,20 @@ const ZikrSchema = new mongoose.Schema({
     ref: 'User',
     required: true
   },
-  // Statik zikrləri müəyyən etmək üçün
   tip: {
     type: String,
     enum: ['static', 'custom'],
     default: 'custom'
   },
-  // Reng opsiyonel - istifadəçi istəsə seçər
   reng: {
     type: String,
-    default: '#4CAF50', // Default yaşıl rəng
+    default: '#4CAF50',
     match: [/^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$/, 'Düzgün hex rəng kodu daxil edin']
   }
 }, {
   timestamps: true
 });
 
-// İstifadəçi bazasında eyni adlı zikrin olmaması üçün indeks (unikallıq custom zikrlər üçün)
 ZikrSchema.index({ user: 1, ad: 1 }, { unique: true });
 
 module.exports = mongoose.model('Zikr', ZikrSchema);
