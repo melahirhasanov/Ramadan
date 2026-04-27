@@ -1,0 +1,10 @@
+.container { padding: 20px; margin-left: 260px; margin-top: 70px; }
+.form { background: white; padding: 20px; border-radius: 20px; margin-bottom: 30px; display: flex; flex-direction: column; gap: 12px; max-width: 500px; }
+.form input, .form select, .form textarea { padding: 12px; border-radius: 30px; border: 1px solid #ddd; }
+.addBtn { background: linear-gradient(135deg, #1E88E5, #43A047); color: white; border: none; padding: 10px; border-radius: 30px; cursor: pointer; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 20px; }
+.card { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.list { background: white; border-radius: 16px; padding: 20px; list-style: none; }
+.list li { padding: 8px 0; border-bottom: 1px solid #eee; }
+.totalCard { background: linear-gradient(135deg, #1E88E5, #43A047); color: white; padding: 20px; border-radius: 20px; margin-bottom: 20px; font-size: 24px; font-weight: bold; text-align: center; }
+@media (max-width: 768px) { .container { margin-left: 0; padding-top: 70px; } }

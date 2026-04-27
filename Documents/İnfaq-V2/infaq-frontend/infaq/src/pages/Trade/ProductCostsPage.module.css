@@ -1,0 +1,620 @@
+/* ============================================
+   KONTEYNER
+   ============================================ */
+.container {
+  margin-left: 260px;
+  margin-top: 80px;
+  padding: 28px 32px;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.headerIcon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #1e293b 0%, #2d3a4a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 4px 0;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+.settingsBtn {
+  background: #f1f5f9;
+  color: #475569;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settingsBtn:hover {
+  background: #e2e8f0;
+}
+
+.settingsBtn.active {
+  background: #6366f1;
+  color: white;
+}
+
+/* ============================================
+   PARAMETRLƏR PANELİ
+   ============================================ */
+.settingsPanel {
+  background: white;
+  border-radius: 24px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+.settingsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: flex-end;
+}
+
+.settingGroup {
+  flex: 1;
+  min-width: 200px;
+}
+
+.settingGroup label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 12px;
+}
+
+.rangeInput {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.rangeInput input {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  background: #e2e8f0;
+  -webkit-appearance: none;
+}
+
+.rangeInput input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #6366f1;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.rangeValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #6366f1;
+  min-width: 50px;
+  text-align: center;
+}
+
+.settingHint {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.recalcBtn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s;
+}
+
+.recalcBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* ============================================
+   STATİSTİKA KARTLARI
+   ============================================ */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.statCard {
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s;
+}
+
+.statCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.statIcon {
+  width: 48px;
+  height: 48px;
+  background: #f1f5f9;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.statInfo h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+
+.statInfo p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ============================================
+   FILTR BAR
+   ============================================ */
+.filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 28px;
+  background: white;
+  padding: 16px 24px;
+  border-radius: 60px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.searchBox {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #94a3b8;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 40px 12px 44px;
+  border: 2px solid #e2e8f0;
+  border-radius: 44px;
+  font-size: 14px;
+  transition: all 0.2s;
+  outline: none;
+  background: white;
+}
+
+.searchInput:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.clearBtn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #94a3b8;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.clearBtn:hover {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.categoryFilter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f1f5f9;
+  padding: 6px 16px;
+  border-radius: 40px;
+}
+
+.filterIcon {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.categorySelect {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  padding: 8px 0;
+  cursor: pointer;
+  outline: none;
+  color: #334155;
+  font-weight: 500;
+}
+
+/* ============================================
+   LOADING & EMPTY STATES
+   ============================================ */
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 24px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  color: #6366f1;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loadingContainer p {
+  margin-top: 16px;
+  color: #64748b;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 24px;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.emptyState h3 {
+  font-size: 20px;
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.emptyState p {
+  color: #64748b;
+}
+
+/* ============================================
+   GRID & CARDS
+   ============================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border: 1px solid #eef2f8;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+}
+
+.cardImageWrapper {
+  height: 160px;
+  overflow: hidden;
+  background: #f1f5f9;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 20px;
+  flex: 1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.productName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.categoryBadge {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  background: #eef2ff;
+  color: #6366f1;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.masterName {
+  font-size: 13px;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.productDescription {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ========== HESABLAMA HİSSƏSİ ========== */
+.loadingCost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 16px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.smallSpinner {
+  width: 16px;
+  height: 16px;
+  animation: spin 0.6s linear infinite;
+}
+
+.costGrid {
+  background: #f8fafc;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.costItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.costItem:last-child {
+  border-bottom: none;
+}
+
+.costLabel {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.costValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.sellingValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: #10b981;
+}
+
+.profitValue {
+  font-size: 15px;
+  font-weight: 700;
+  color: #6366f1;
+}
+
+.shareItem {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.shareBar {
+  display: flex;
+  height: 24px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.masterBar {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  transition: width 0.3s ease;
+}
+
+.technicalBar {
+  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+  transition: width 0.3s ease;
+}
+
+.shareLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.masterLabel {
+  color: #3b82f6;
+  font-weight: 500;
+}
+
+.technicalLabel {
+  color: #8b5cf6;
+  font-weight: 500;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 70px;
+    padding: 16px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .headerLeft {
+    justify-content: space-between;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .settingsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    border-radius: 24px;
+  }
+
+  .searchBox {
+    max-width: 100%;
+  }
+
+  .categoryFilter {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .shareLabels {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

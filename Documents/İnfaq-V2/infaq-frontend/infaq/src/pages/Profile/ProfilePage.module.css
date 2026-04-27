@@ -1,0 +1,5 @@
+.container { padding: 20px; margin-left: 260px; margin-top: 70px; }
+.card { background: white; padding: 30px; border-radius: 20px; max-width: 500px; }
+.card input { width: 100%; padding: 12px; margin: 10px 0; border-radius: 30px; border: 1px solid #ddd; }
+.changeBtn { background: linear-gradient(135deg, #1E88E5, #43A047); color: white; border: none; padding: 12px; border-radius: 30px; cursor: pointer; width: 100%; }
+@media (max-width: 768px) { .container { margin-left: 0; padding-top: 70px; } }

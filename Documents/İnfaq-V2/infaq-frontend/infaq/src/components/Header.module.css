@@ -1,0 +1,55 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  backdrop-filter: blur(10px);
+  padding: 12px 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  z-index: 999;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f5f5;
+  padding: 6px 16px;
+  border-radius: 40px;
+}
+
+.name {
+  font-weight: 500;
+  color: #0D47A1;
+}
+
+.role {
+  font-size: 12px;
+  background: #1E88E5;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  color: #d32f2f;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: 0.2s;
+}
+
+.logoutBtn:hover {
+  background: #ffebee;
+}

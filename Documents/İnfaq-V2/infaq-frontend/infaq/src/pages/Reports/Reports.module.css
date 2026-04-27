@@ -1,0 +1,13 @@
+.container { padding: 20px; margin-left: 260px; margin-top: 70px; }
+.header { display: flex; justify-content: space-between; align-items: center; }
+.addBtn { background: linear-gradient(135deg, #1E88E5, #43A047); color: white; padding: 8px 16px; border-radius: 30px; text-decoration: none; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px,1fr)); gap: 20px; margin-top: 20px; }
+.card { background: white; border-radius: 20px; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+.approveBtn { background: #2E7D32; color: white; border: none; padding: 6px 12px; border-radius: 20px; cursor: pointer; margin-top: 10px; }
+.approved { color: #2E7D32; font-weight: bold; }
+.fileUpload { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.fileUpload a { background: #e3f2fd; padding: 4px 8px; border-radius: 16px; font-size: 12px; text-decoration: none; color: #1E88E5; }
+.form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; background: white; padding: 30px; border-radius: 20px; margin-top: 20px; }
+.form input { padding: 12px; border-radius: 30px; border: 1px solid #ddd; }
+.submitBtn { background: linear-gradient(135deg, #1E88E5, #43A047); color: white; padding: 12px; border-radius: 30px; border: none; cursor: pointer; }
+@media (max-width: 768px) { .container { margin-left: 0; padding-top: 70px; } }

@@ -1,0 +1,582 @@
+/* ============================================
+   ƏSAS KONTEYNER
+   ============================================ */
+.container {
+  padding: 28px 32px;
+  margin-left: 260px;
+  margin-top: 70px;
+  min-height: calc(100vh - 70px);
+  background: linear-gradient(135deg, #f0f9ff 0%, #e8f5e9 100%);
+}
+
+/* ============================================
+   BAŞLIQ HİSSƏSİ
+   ============================================ */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  background: linear-gradient(115deg, #1e3a5f, #2c7a4d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.3px;
+  position: relative;
+  display: inline-block;
+}
+
+.header h1::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #2c7a4d, #1e88e5);
+  border-radius: 4px;
+}
+
+/* ============================================
+   DÜYMƏLƏR
+   ============================================ */
+.addBtn {
+  background: linear-gradient(105deg, #1e6f5c, #2c7a4d);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(28, 110, 92, 0.25);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.addBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(28, 110, 92, 0.35);
+}
+
+.backBtn, .editBtn, .deleteBtn, .viewBtn {
+  padding: 8px 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.backBtn {
+  background: #eef2f8;
+  color: #2c3e50;
+}
+
+.backBtn:hover {
+  background: #e2e8f0;
+  transform: translateX(-3px);
+}
+
+.editBtn {
+  background: #2c7a4d;
+  color: white;
+}
+
+.editBtn:hover {
+  background: #1e6f5c;
+  transform: translateY(-2px);
+}
+
+.deleteBtn {
+  background: #d32f2f;
+  color: white;
+}
+
+.deleteBtn:hover {
+  background: #b71c1c;
+  transform: translateY(-2px);
+}
+
+.viewBtn {
+  background: #1e88e5;
+  color: white;
+}
+
+.viewBtn:hover {
+  background: #1565c0;
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   AXTARIŞ INPUT
+   ============================================ */
+.searchBox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 8px 20px;
+  border-radius: 48px;
+  max-width: 360px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+.searchBox svg {
+  color: #94a3b8;
+  font-size: 16px;
+}
+
+.searchBox input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+/* ============================================
+   KART QRİDİ
+   ============================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+  margin-bottom: 40px;
+}
+
+/* Kart */
+.card {
+  background: white;
+  border-radius: 28px;
+  padding: 20px;
+  transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+  border: 1px solid #eef2f8;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+  border-color: transparent;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 4px;
+}
+
+.roleBadge {
+  background: linear-gradient(105deg, #1e88e5, #0d47a1);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.cardBody {
+  margin: 16px 0;
+  padding-top: 12px;
+  border-top: 1px solid #eef2f8;
+}
+
+.cardBody p {
+  font-size: 13px;
+  color: #4a5b6e;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cardActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   DETALLI SƏHİFƏ
+   ============================================ */
+.detailHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.detailCard {
+  background: white;
+  border-radius: 32px;
+  padding: 32px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eef2f8;
+}
+
+.detailAvatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #2c7a4d;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.detailCard h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e3a5f;
+  margin-bottom: 20px;
+}
+
+.detailInfo {
+  text-align: left;
+  margin-top: 20px;
+  background: #f8fafc;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+.detailInfo p {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.activeIcon {
+  color: #2c7a4d;
+  font-size: 16px;
+}
+
+.inactiveIcon {
+  color: #d32f2f;
+  font-size: 16px;
+}
+
+/* ============================================
+   FORM
+   ============================================ */
+.form {
+  background: white;
+  border-radius: 28px;
+  padding: 32px;
+  max-width: 560px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 14px;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 30px;
+  border: 1px solid #e2e8f0;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus {
+  outline: none;
+  border-color: #2c7a4d;
+  box-shadow: 0 0 0 3px rgba(44, 122, 77, 0.1);
+}
+
+.formGroup span {
+  display: block;
+  font-size: 12px;
+  color: #d32f2f;
+  margin-top: 4px;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  width: auto;
+}
+
+.submitBtn {
+  background: linear-gradient(105deg, #1e6f5c, #2c7a4d);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.submitBtn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(28, 110, 92, 0.3);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ============================================
+   YÜKLƏMƏ VƏ BOŞ MƏLUMAT
+   ============================================ */
+.loader {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 56px;
+  color: #2c7a4d;
+  font-weight: 600;
+}
+
+.empty {
+  text-align: center;
+  padding: 60px;
+  font-size: 16px;
+  color: #94a3b8;
+  background: white;
+  border-radius: 32px;
+  margin-top: 20px;
+}
+
+/* ============================================
+   RESPONSİV
+   ============================================ */
+@media (max-width: 768px) {
+  .container {
+    margin-left: 0;
+    padding: 70px 16px 24px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .addBtn {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .cardActions a,
+  .cardActions button {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .detailCard {
+    padding: 24px;
+  }
+
+  .form {
+    padding: 24px;
+  }
+}
+/* Profil şəkli üçün stillər */
+.imageUploadContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.imagePreviewWrapper {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+}
+
+.imagePreview {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--border-color, #e2e8f0);
+}
+
+.removeImageBtn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.removeImageBtn:hover:not(:disabled) {
+  background: #b91c1c;
+  transform: scale(1.1);
+}
+
+.removeImageBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.uploadArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.uploadLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color, #3b82f6);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content;
+  transition: all 0.2s;
+}
+
+.uploadLabel:hover {
+  background: var(--primary-dark, #2563eb);
+  transform: translateY(-1px);
+}
+
+.uploadHint {
+  font-size: 12px;
+  color: var(--text-secondary, #64748b);
+}
+
+.error {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Form Group düzəlişləri */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary, #1e293b);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.checkboxLabel input {
+  width: auto;
+  margin: 0;
+}
+
+.submitBtn {
+  background: var(--primary-color, #3b82f6);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background: var(--primary-dark, #2563eb);
+  transform: translateY(-1px);
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,54 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1E88E5, #43A047);
+}
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 32px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+.title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #1E88E5, #43A047);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.input {
+  width: 100%;
+  padding: 14px 18px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 16px;
+  transition: 0.2s;
+}
+.input:focus {
+  outline: none;
+  border-color: #1E88E5;
+  box-shadow: 0 0 0 3px rgba(30,136,229,0.2);
+}
+.button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #1E88E5, #43A047);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
